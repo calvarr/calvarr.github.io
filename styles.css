@@ -187,6 +187,10 @@ h2 {
   cursor: zoom-in;
 }
 
+.shot-link {
+  display: block;
+}
+
 .shot figcaption {
   padding: 0.65rem 0.8rem;
   color: var(--muted);
