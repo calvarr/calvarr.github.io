@@ -20,7 +20,10 @@
     <header class="hero">
       <nav class="container nav">
         <a class="brand" href="#top">DLPulse</a>
-        <a class="cta-small" href="#formats">View formats</a>
+        <div class="nav-links">
+          <a class="cta-small" href="#formats">View formats</a>
+          <a class="cta-small" href="#releases">View releases</a>
+        </div>
       </nav>
       <div class="container hero-content" id="top">
         <p class="eyebrow">Cross-platform ecosystem, multiple experiences</p>
@@ -33,6 +36,7 @@
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#formats">Explore formats</a>
+          <a class="button ghost" href="#releases">Latest releases</a>
           <a class="button ghost" href="#gallery">View screenshots</a>
         </div>
       </div>
@@ -203,6 +207,13 @@
         </p>
       </div>
     </footer>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button id="lightbox-close" class="lightbox-close" aria-label="Close image view">
+        &times;
+      </button>
+      <img id="lightbox-image" src="" alt="" />
+    </div>
 
     <script src="script.js"></script>
   </body>
