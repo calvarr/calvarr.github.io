@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DLPulse - media download ecosystem built on yt-dlp: Textual TUI, Flet Desktop/Web, CLI, and Android."
+    />
+    <title>DLPulse - All Formats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="container nav">
+        <a class="brand" href="#top">DLPulse</a>
+        <a class="cta-small" href="#formats">View formats</a>
+      </nav>
+      <div class="container hero-content" id="top">
+        <p class="eyebrow">One ecosystem, multiple experiences</p>
+        <h1>DLPulse in all your favorite formats</h1>
+        <p class="subtitle">
+          Terminal, desktop, automation, or mobile. Choose the edition that
+          fits your workflow and download media fast with
+          <code>yt-dlp</code>.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#formats">Explore formats</a>
+          <a class="button ghost" href="#gallery">View screenshots</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section container" id="formats">
+        <h2>DLPulse Formats</h2>
+        <p class="section-subtitle">
+          Each edition is optimized for a different usage style.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>DLPulse Textual</h3>
+            <p>
+              Terminal-first TUI for YouTube/SoundCloud search, URL pasting,
+              and shell-style download management.
+            </p>
+            <a
+              class="repo-link"
+              href="https://github.com/calvarr/DLPulse-textual"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub Repository</a
+            >
+          </article>
+
+          <article class="card">
+            <h3>DLPulse Flet</h3>
+            <p>
+              Full desktop app (plus web/API in the project), with a graphical
+              experience, local library, and Chromecast support.
+            </p>
+            <a
+              class="repo-link"
+              href="https://github.com/calvarr/DLPulse"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub Repository</a
+            >
+          </article>
+
+          <article class="card">
+            <h3>DLPulse CLI</h3>
+            <p>
+              Lightweight edition for scripting, automation, and headless
+              environments, with fast commands for search, download, and playback.
+            </p>
+            <a
+              class="repo-link"
+              href="https://github.com/calvarr/DLPulse-cli"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub Repository</a
+            >
+          </article>
+
+          <article class="card">
+            <h3>DLPulse Android</h3>
+            <p>
+              Android app running <code>yt-dlp</code> locally on device:
+              download, search, built-in player, and Chromecast casting.
+            </p>
+            <a
+              class="repo-link"
+              href="https://github.com/calvarr/DLPulse-android"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub Repository</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="gallery">
+        <div class="container">
+          <h2>Screenshots</h2>
+          <p class="section-subtitle">
+            A quick look at the key interfaces across the ecosystem.
+          </p>
+          <div class="gallery">
+            <figure class="shot">
+              <img src="dlpulse_textual1.png" alt="DLPulse Textual in terminal" />
+              <figcaption>DLPulse Textual</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="dlpulse_flet1.png" alt="DLPulse Flet - main screen" />
+              <figcaption>DLPulse Flet - Main</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="dlpulse_flet2.png" alt="DLPulse Flet - secondary interface" />
+              <figcaption>DLPulse Flet - Extra view</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="dlpulse_cli1.png" alt="DLPulse CLI - commands" />
+              <figcaption>DLPulse CLI</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="dlpulse_cli2.png" alt="DLPulse CLI - detailed output" />
+              <figcaption>DLPulse CLI - Output</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="dlpulse_android1.jpeg" alt="DLPulse Android on phone" />
+              <figcaption>DLPulse Android</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>
+          DLPulse ecosystem - showcase for GitHub Pages.
+          <span id="year"></span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
