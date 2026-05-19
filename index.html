@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="DLPulse - media download ecosystem built on yt-dlp: Textual TUI, Flet Desktop/Web, CLI, and Android."
+      content="DLPulse — media download ecosystem on yt-dlp: DLPulse Next desktop, Textual TUI, Flet, CLI, and Android. Install guides for Linux, Windows, and macOS."
     />
-    <title>DLPulse - All Formats</title>
+    <title>DLPulse — All Formats</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,33 +21,61 @@
       <nav class="container nav">
         <a class="brand" href="#top">DLPulse</a>
         <div class="nav-links">
-          <a class="cta-small" href="#formats">View formats</a>
-          <a class="cta-small" href="#releases">View releases</a>
+          <a class="cta-small" href="#formats">Formats</a>
+          <a class="cta-small" href="#install">Install</a>
+          <a class="cta-small" href="#gallery">Screenshots</a>
         </div>
       </nav>
       <div class="container hero-content" id="top">
-        <p class="eyebrow">Cross-platform ecosystem, multiple experiences</p>
+        <p class="eyebrow">One ecosystem, multiple experiences</p>
         <h1>DLPulse in all your favorite formats</h1>
         <p class="subtitle">
-          DLPulse is a cross-platform project available on Linux, macOS,
-          Windows, and Android. Choose the edition that fits your workflow and
-          download media fast with
-          <code>yt-dlp</code>.
+          Terminal, desktop, automation, or mobile. The new
+          <strong>DLPulse Next</strong> desktop app uses a native window
+          (pywebview + WebKit) on Linux, with pre-built installers for Windows
+          and macOS. Everything is built on <code>yt-dlp</code>.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#formats">Explore formats</a>
-          <a class="button ghost" href="#releases">Latest releases</a>
-          <a class="button ghost" href="#gallery">View screenshots</a>
+          <a class="button primary" href="#install">Install DLPulse Next</a>
+          <a class="button ghost" href="#formats">Explore all formats</a>
         </div>
       </div>
     </header>
 
     <main>
       <section class="section container" id="formats">
-        <h2>DLPulse Formats</h2>
+        <h2>DLPulse formats</h2>
         <p class="section-subtitle">
           Each edition is optimized for a different usage style.
         </p>
+
+        <article class="card card-featured">
+          <p class="card-badge">Desktop — recommended</p>
+          <h3>DLPulse Next</h3>
+          <p>
+            Cross-platform desktop app: YouTube &amp; SoundCloud search, local
+            library, built-in player, Chromecast, format presets. Native UI via
+            pywebview (WebKitGTK on Linux, WebView2 on Windows, WKWebView on
+            macOS).
+          </p>
+          <div class="card-actions">
+            <a
+              class="repo-link"
+              href="https://github.com/calvarr/DLPulse-next"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <a
+              class="repo-link"
+              href="https://github.com/calvarr/DLPulse-next/releases"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Releases</a
+            >
+            <a class="repo-link" href="#install">Install guide</a>
+          </div>
+        </article>
 
         <div class="cards">
           <article class="card">
@@ -61,7 +89,7 @@
               href="https://github.com/calvarr/DLPulse-textual"
               target="_blank"
               rel="noopener noreferrer"
-              >GitHub Repository</a
+              >GitHub repository</a
             >
           </article>
 
@@ -76,7 +104,7 @@
               href="https://github.com/calvarr/DLPulse"
               target="_blank"
               rel="noopener noreferrer"
-              >GitHub Repository</a
+              >GitHub repository</a
             >
           </article>
 
@@ -84,14 +112,15 @@
             <h3>DLPulse CLI</h3>
             <p>
               Lightweight edition for scripting, automation, and headless
-              environments, with fast commands for search, download, and playback.
+              environments, with fast commands for search, download, and
+              playback.
             </p>
             <a
               class="repo-link"
               href="https://github.com/calvarr/DLPulse-cli"
               target="_blank"
               rel="noopener noreferrer"
-              >GitHub Repository</a
+              >GitHub repository</a
             >
           </article>
 
@@ -106,107 +135,275 @@
               href="https://github.com/calvarr/DLPulse-android"
               target="_blank"
               rel="noopener noreferrer"
-              >GitHub Repository</a
+              >GitHub repository</a
             >
           </article>
         </div>
       </section>
 
-      <section class="section container" id="releases">
-        <h2>Latest Releases</h2>
-        <p class="section-subtitle">
-          Stable release tracks for the main DLPulse editions.
-        </p>
-        <div class="cards">
-          <article class="card">
-            <h3>DLPulse Flet</h3>
-            <p>
-              Latest stable release: <strong>v1.0.3</strong>. Includes desktop
-              app updates and packaged assets.
-            </p>
-            <a
-              class="repo-link"
-              href="https://github.com/calvarr/DLPulse/releases/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View Releases</a
-            >
-          </article>
-          <article class="card">
-            <h3>DLPulse Textual</h3>
-            <p>
-              Latest stable release: <strong>v1.0.6</strong>. Updated Textual
-              TUI builds and distribution artifacts.
-            </p>
-            <a
-              class="repo-link"
-              href="https://github.com/calvarr/DLPulse-textual/releases/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View Releases</a
-            >
-          </article>
-          <article class="card">
-            <h3>DLPulse Android</h3>
-            <p>
-              Latest stable release: <strong>v1.0.3</strong>. APK releases ready
-              for sideload installation.
-            </p>
-            <a
-              class="repo-link"
-              href="https://github.com/calvarr/DLPulse-android/releases"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View Releases</a
-            >
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="gallery">
+      <section class="section section-alt" id="install">
         <div class="container">
-          <h2>Screenshots</h2>
+          <h2>Install DLPulse Next</h2>
           <p class="section-subtitle">
-            A quick look at the key interfaces across the ecosystem.
+            Pre-built installers for <strong>Windows</strong> and
+            <strong>macOS</strong>. On <strong>Linux</strong>, install from
+            source with your distro packages (GTK + WebKit + GStreamer).
           </p>
-          <div class="gallery">
-            <figure class="shot">
-              <a class="shot-link" href="dlpulse_textual1.png" target="_blank" rel="noopener noreferrer">
-                <img src="dlpulse_textual1.png" alt="DLPulse Textual in terminal" />
-              </a>
-              <figcaption>DLPulse Textual</figcaption>
-            </figure>
-            <figure class="shot">
-              <a class="shot-link" href="dlpulse_flet1.png" target="_blank" rel="noopener noreferrer">
-                <img src="dlpulse_flet1.png" alt="DLPulse Flet - main screen" />
-              </a>
-              <figcaption>DLPulse Flet - Main</figcaption>
-            </figure>
-            <figure class="shot">
-              <a class="shot-link" href="dlpulse_flet2.png" target="_blank" rel="noopener noreferrer">
-                <img src="dlpulse_flet2.png" alt="DLPulse Flet - secondary interface" />
-              </a>
-              <figcaption>DLPulse Flet - Extra view</figcaption>
-            </figure>
-            <figure class="shot">
-              <a class="shot-link" href="dlpulse_cli1.png" target="_blank" rel="noopener noreferrer">
-                <img src="dlpulse_cli1.png" alt="DLPulse CLI - commands" />
-              </a>
-              <figcaption>DLPulse CLI</figcaption>
-            </figure>
-            <figure class="shot">
-              <a class="shot-link" href="dlpulse_cli2.png" target="_blank" rel="noopener noreferrer">
-                <img src="dlpulse_cli2.png" alt="DLPulse CLI - detailed output" />
-              </a>
-              <figcaption>DLPulse CLI - Output</figcaption>
-            </figure>
-            <figure class="shot">
-              <a class="shot-link" href="dlpulse_android1.jpeg" target="_blank" rel="noopener noreferrer">
-                <img src="dlpulse_android1.jpeg" alt="DLPulse Android on phone" />
-              </a>
-              <figcaption>DLPulse Android</figcaption>
-            </figure>
+
+          <div class="install-downloads">
+            <a
+              class="button primary"
+              href="https://github.com/calvarr/DLPulse-next/releases/tag/dlpulse-next-continuous"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download releases</a
+            >
+            <span class="install-note"
+              >Continuous build: <code>DLPulseNext-Setup.exe</code> (Windows),
+              <code>DLPulseNext.dmg</code> (macOS)</span
+            >
           </div>
+
+          <div class="install-tabs" role="tablist" aria-label="Install platform">
+            <button
+              type="button"
+              class="install-tab active"
+              role="tab"
+              aria-selected="true"
+              data-panel="linux-arch"
+            >
+              Arch / Manjaro
+            </button>
+            <button
+              type="button"
+              class="install-tab"
+              role="tab"
+              aria-selected="false"
+              data-panel="linux-debian"
+            >
+              Debian / Ubuntu
+            </button>
+            <button
+              type="button"
+              class="install-tab"
+              role="tab"
+              aria-selected="false"
+              data-panel="linux-fedora"
+            >
+              Fedora
+            </button>
+            <button
+              type="button"
+              class="install-tab"
+              role="tab"
+              aria-selected="false"
+              data-panel="linux-opensuse"
+            >
+              openSUSE
+            </button>
+            <button
+              type="button"
+              class="install-tab"
+              role="tab"
+              aria-selected="false"
+              data-panel="windows"
+            >
+              Windows
+            </button>
+            <button
+              type="button"
+              class="install-tab"
+              role="tab"
+              aria-selected="false"
+              data-panel="macos"
+            >
+              macOS
+            </button>
+          </div>
+
+          <div class="install-panels">
+            <article
+              class="install-panel active"
+              id="linux-arch"
+              role="tabpanel"
+            >
+              <h3>Linux — Arch / Manjaro / EndeavourOS</h3>
+              <p class="install-lead">
+                Requires Python 3.11+. No Linux AppImage — use system WebKit for
+                a stable native window.
+              </p>
+              <p class="install-step-title">1. System packages</p>
+              <pre><code>sudo pacman -S --needed \
+  python python-pip python-gobject \
+  gtk3 webkit2gtk-4.1 gobject-introspection-runtime \
+  gstreamer gst-plugins-base gst-plugins-good \
+  mpv ffmpeg aria2</code></pre>
+              <p class="install-step-title">2. Application</p>
+              <pre><code>git clone https://github.com/calvarr/DLPulse-next.git
+cd DLPulse-next
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip wheel
+pip install -e ".[webview-gtk]"
+dlpulse-next</code></pre>
+            </article>
+
+            <article class="install-panel" id="linux-debian" role="tabpanel" hidden>
+              <h3>Linux — Debian / Ubuntu</h3>
+              <p class="install-lead">
+                Ubuntu 22.04 / Debian 12 use WebKit <strong>4.0</strong>; Ubuntu
+                24.04+ use WebKit <strong>4.1</strong> (shown below).
+              </p>
+              <p class="install-step-title">1. System packages (24.04+ / WebKit 4.1)</p>
+              <pre><code>sudo apt update
+sudo apt install -y \
+  python3 python3-pip python3-venv python3-gi python3-gi-cairo gir1.2-gtk-3.0 \
+  libgtk-3-0 libwebkit2gtk-4.1-0 gir1.2-webkit2-4.1 gobject-introspection \
+  gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
+  mpv ffmpeg aria2</code></pre>
+              <p class="install-step-title">Ubuntu 22.04 / Debian 12 (WebKit 4.0)</p>
+              <pre><code>sudo apt install -y \
+  python3 python3-pip python3-venv python3-gi python3-gi-cairo gir1.2-gtk-3.0 \
+  libgtk-3-0 libwebkit2gtk-4.0-37 gir1.2-webkit2-4.0 gobject-introspection \
+  gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
+  mpv ffmpeg aria2</code></pre>
+              <p class="install-step-title">2. Application</p>
+              <pre><code>git clone https://github.com/calvarr/DLPulse-next.git
+cd DLPulse-next
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip wheel
+pip install -e ".[webview-gtk]"
+dlpulse-next</code></pre>
+            </article>
+
+            <article class="install-panel" id="linux-fedora" role="tabpanel" hidden>
+              <h3>Linux — Fedora</h3>
+              <p class="install-step-title">1. System packages</p>
+              <pre><code>sudo dnf install -y \
+  python3 python3-pip python3-gobject \
+  gtk3 webkit2gtk4.1 \
+  gstreamer1-plugins-base gstreamer1-plugins-good \
+  mpv ffmpeg aria2</code></pre>
+              <p class="install-step-title">2. Application</p>
+              <pre><code>git clone https://github.com/calvarr/DLPulse-next.git
+cd DLPulse-next
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip wheel
+pip install -e ".[webview-gtk]"
+dlpulse-next</code></pre>
+            </article>
+
+            <article class="install-panel" id="linux-opensuse" role="tabpanel" hidden>
+              <h3>Linux — openSUSE</h3>
+              <p class="install-step-title">1. System packages</p>
+              <pre><code>sudo zypper install -y \
+  python3 python3-pip python3-gobject \
+  gtk3 webkit2gtk3 \
+  gstreamer-plugins-base gstreamer-plugins-good \
+  mpv ffmpeg aria2</code></pre>
+              <p class="install-step-title">2. Application</p>
+              <pre><code>git clone https://github.com/calvarr/DLPulse-next.git
+cd DLPulse-next
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip wheel
+pip install -e ".[webview-gtk]"
+dlpulse-next</code></pre>
+            </article>
+
+            <article class="install-panel" id="windows" role="tabpanel" hidden>
+              <h3>Windows</h3>
+              <ol class="install-list">
+                <li>
+                  Download
+                  <a
+                    href="https://github.com/calvarr/DLPulse-next/releases/tag/dlpulse-next-continuous"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><code>DLPulseNext-Setup.exe</code></a
+                  >
+                  from GitHub Releases.
+                </li>
+                <li>Run the installer (installs under <code>Program Files\DLPulse Next</code>).</li>
+                <li>Launch <strong>DLPulse Next</strong> from the Start menu.</li>
+              </ol>
+              <p class="install-lead">
+                Bundled: yt-dlp, ffmpeg, aria2c, WebView2 UI.
+              </p>
+            </article>
+
+            <article class="install-panel" id="macos" role="tabpanel" hidden>
+              <h3>macOS</h3>
+              <ol class="install-list">
+                <li>
+                  Download
+                  <a
+                    href="https://github.com/calvarr/DLPulse-next/releases/tag/dlpulse-next-continuous"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><code>DLPulseNext.dmg</code></a
+                  >
+                  from GitHub Releases.
+                </li>
+                <li>Open the DMG and drag <strong>DLPulse Next</strong> to Applications.</li>
+                <li>
+                  If macOS blocks the app: <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.
+                </li>
+              </ol>
+              <p class="install-lead">
+                Bundled: yt-dlp, ffmpeg, aria2c, WKWebView UI.
+              </p>
+            </article>
+          </div>
+
+          <p class="install-footer">
+            Full details:
+            <a
+              href="https://github.com/calvarr/DLPulse-next#linux-install-from-source"
+              target="_blank"
+              rel="noopener noreferrer"
+              >README on GitHub</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="section container" id="gallery">
+        <h2>Screenshots</h2>
+        <p class="section-subtitle">
+          A quick look at the key interfaces across the ecosystem.
+        </p>
+        <div class="gallery">
+          <figure class="shot shot-featured">
+            <img src="dlpulse_next.png" alt="DLPulse Next desktop app" />
+            <figcaption>DLPulse Next</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="dlpulse_textual1.png" alt="DLPulse Textual in terminal" />
+            <figcaption>DLPulse Textual</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="dlpulse_flet1.png" alt="DLPulse Flet - main screen" />
+            <figcaption>DLPulse Flet — Main</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="dlpulse_flet2.png" alt="DLPulse Flet - secondary interface" />
+            <figcaption>DLPulse Flet — Extra view</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="dlpulse_cli1.png" alt="DLPulse CLI - commands" />
+            <figcaption>DLPulse CLI</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="dlpulse_cli2.png" alt="DLPulse CLI - detailed output" />
+            <figcaption>DLPulse CLI — Output</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="dlpulse_android1.jpeg" alt="DLPulse Android on phone" />
+            <figcaption>DLPulse Android</figcaption>
+          </figure>
         </div>
       </section>
     </main>
@@ -214,18 +411,18 @@
     <footer class="footer">
       <div class="container footer-content">
         <p>
-          DLPulse ecosystem - showcase for GitHub Pages.
+          DLPulse ecosystem —
+          <a
+            href="https://github.com/calvarr/DLPulse-next"
+            target="_blank"
+            rel="noopener noreferrer"
+            >DLPulse Next</a
+          >
+          · GitHub Pages showcase.
           <span id="year"></span>
         </p>
       </div>
     </footer>
-
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-      <button id="lightbox-close" class="lightbox-close" aria-label="Close image view">
-        &times;
-      </button>
-      <img id="lightbox-image" src="" alt="" />
-    </div>
 
     <script src="script.js"></script>
   </body>
