@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="DLPulse — media download ecosystem on yt-dlp: DLPulse Next desktop, Textual TUI, Flet, CLI, and Android. Install guides for Linux, Windows, and macOS."
+      content="DLPulse — educational media-library tools built on yt-dlp and ffmpeg: desktop, TUI, CLI, and Android editions. Install guides for Linux, Windows, and macOS."
     />
     <title>DLPulse — All Formats</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,16 +24,18 @@
           <a class="cta-small" href="#formats">Formats</a>
           <a class="cta-small" href="#install">Install</a>
           <a class="cta-small" href="#gallery">Screenshots</a>
+          <a class="cta-small" href="#legal">Legal</a>
         </div>
       </nav>
       <div class="container hero-content" id="top">
         <p class="eyebrow">One ecosystem, multiple experiences</p>
         <h1>DLPulse in all your favorite formats</h1>
         <p class="subtitle">
-          Terminal, desktop, automation, or mobile. The new
-          <strong>DLPulse Next</strong> desktop app uses a native window
-          (pywebview + WebKit) on Linux, with pre-built installers for Windows
-          and macOS. Everything is built on <code>yt-dlp</code>.
+          Terminal, desktop, automation, or mobile — for <strong>study</strong>,
+          technical research, and a <strong>personal offline library</strong>.
+          Editions wrap <code>yt-dlp</code> and <code>ffmpeg</code>; you choose
+          supported public URLs and formats. <strong>DLPulse Next</strong> uses a
+          native window (pywebview) on Linux, with installers for Windows and macOS.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#install">Install DLPulse Next</a>
@@ -53,10 +55,10 @@
           <p class="card-badge">Desktop — recommended</p>
           <h3>DLPulse Next</h3>
           <p>
-            Cross-platform desktop app: YouTube &amp; SoundCloud search, local
-            library, built-in player, Chromecast, format presets. Native UI via
-            pywebview (WebKitGTK on Linux, WebView2 on Windows, WKWebView on
-            macOS).
+            Cross-platform desktop shell for educational use: resolves public page
+            URLs via <code>yt-dlp</code>, local library, playback, Chromecast, format
+            presets. Uses <code>ffmpeg</code> where needed. Native UI via pywebview
+            (WebKitGTK on Linux, WebView2 on Windows, WKWebView on macOS).
           </p>
           <div class="card-actions">
             <a
@@ -81,8 +83,8 @@
           <article class="card">
             <h3>DLPulse Textual</h3>
             <p>
-              Terminal-first TUI for YouTube/SoundCloud search, URL pasting,
-              and shell-style download management.
+              Terminal-first TUI for study and personal archiving: keyword or URL
+              input, yt-dlp/ffmpeg workflows, and shell-style library management.
             </p>
             <a
               class="repo-link"
@@ -111,9 +113,8 @@
           <article class="card">
             <h3>DLPulse CLI</h3>
             <p>
-              Lightweight edition for scripting, automation, and headless
-              environments, with fast commands for search, download, and
-              playback.
+              Lightweight edition for scripting and automation around yt-dlp:
+              resolve URLs, save media locally for offline study, and playback.
             </p>
             <a
               class="repo-link"
@@ -127,8 +128,9 @@
           <article class="card">
             <h3>DLPulse Android</h3>
             <p>
-              Android app running <code>yt-dlp</code> locally on device:
-              download, search, built-in player, and Chromecast casting.
+              On-device <code>yt-dlp</code> / <code>ffmpeg</code> wrapper for
+              educational use: URL analysis, local personal library, built-in
+              player, and Chromecast casting.
             </p>
             <a
               class="repo-link"
@@ -405,6 +407,38 @@ dlpulse-next</code></pre>
             <figcaption>DLPulse Android</figcaption>
           </figure>
         </div>
+      </section>
+
+      <section class="section container legal-section" id="legal">
+        <h2>Legal notice</h2>
+        <p class="section-subtitle">
+          Please read before using any DLPulse edition (desktop, mobile, CLI, or TUI).
+        </p>
+        <article class="card legal-card">
+          <p>
+            <strong>DLPulse</strong> is open-source software intended solely for educational purposes,
+            technical research, and managing your personal media library.
+          </p>
+          <h3>1. Nature of the software</h3>
+          <p>
+            DLPulse acts as an automated wrapper around third-party utilities (such as yt-dlp and ffmpeg).
+            The author does not host, distribute, or control copyrighted media. The application interacts
+            only with publicly available sources on the internet; you alone are responsible for how you use that data.
+          </p>
+          <h3>2. Your responsibility</h3>
+          <p>By using DLPulse, you accept that:</p>
+          <ul>
+            <li><strong>Legal compliance</strong> — You must follow copyright laws in your country and each platform’s terms of service (e.g. YouTube, SoundCloud).</li>
+            <li><strong>Private use</strong> — The software is for personal offline/local storage. Redistribution, commercial use, or infringement is your responsibility.</li>
+            <li><strong>No warranties</strong> — Provided “as is” without warranty. The author is not liable for account blocks, IP limits, or other penalties from third parties.</li>
+          </ul>
+          <h3>3. No affiliation</h3>
+          <p>
+            DLPulse is not affiliated with, endorsed by, or sponsored by any streaming platform (e.g. YouTube, SoundCloud, Google LLC).
+            Product names and trademarks belong to their owners.
+          </p>
+          <p class="legal-foot">If you do not agree to these terms, do not use, install, or distribute this software.</p>
+        </article>
       </section>
     </main>
 

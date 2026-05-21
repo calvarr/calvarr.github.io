@@ -353,6 +353,32 @@ h3 {
   font-weight: 600;
 }
 
+.legal-section h3 {
+  margin: 1.1rem 0 0.4rem;
+  font-size: 1.05rem;
+  color: var(--accent-2);
+}
+
+.legal-card {
+  text-align: left;
+}
+
+.legal-card p,
+.legal-card li {
+  color: var(--muted);
+}
+
+.legal-card ul {
+  margin: 0.4rem 0 0.8rem 1.2rem;
+  padding: 0;
+}
+
+.legal-foot {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--text) !important;
+}
+
 .footer {
   padding: 1.2rem 0 2.2rem;
 }
