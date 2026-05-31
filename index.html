@@ -101,13 +101,23 @@
               Full desktop app (plus web/API in the project), with a graphical
               experience, local library, and Chromecast support.
             </p>
-            <a
-              class="repo-link"
-              href="https://github.com/calvarr/DLPulse"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub repository</a
-            >
+            <div class="card-actions">
+              <a
+                class="repo-link"
+                href="https://github.com/calvarr/DLPulse"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+              <a
+                class="repo-link"
+                href="https://github.com/calvarr/DLPulse/releases"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Releases</a
+              >
+              <a class="repo-link" href="#install">Install guide</a>
+            </div>
           </article>
 
           <article class="card">
@@ -398,6 +408,12 @@ dlpulse-next</code></pre>
 
             <article class="install-panel" id="macos" role="tabpanel" hidden>
               <h3>macOS</h3>
+              <p class="install-lead">
+                Both desktop editions are ad-hoc signed (no Apple Developer ID). After copying to
+                Applications, remove quarantine if macOS blocks launch.
+              </p>
+
+              <p class="install-step-title">DLPulse Next</p>
               <ol class="install-list">
                 <li>
                   Download
@@ -414,15 +430,40 @@ dlpulse-next</code></pre>
                     rel="noopener noreferrer"
                     ><code>DLPulseNext-arm64.dmg</code></a
                   >
-                  (Apple Silicon) from GitHub Releases.
+                  (Apple Silicon).
                 </li>
-                <li>Open the DMG and drag <strong>DLPulse Next</strong> to Applications.</li>
+                <li>Open the DMG and drag <strong>DLPulseNext.app</strong> to Applications.</li>
                 <li>
-                  If macOS blocks the app: <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.
+                  Remove quarantine (recommended if blocked or “damaged”):
+                  <pre><code>sudo xattr -r -d com.apple.quarantine "/Applications/DLPulseNext.app" 2>/dev/null</code></pre>
+                </li>
+                <li>
+                  Or: right‑click the app → <strong>Open</strong>, or
+                  <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.
                 </li>
               </ol>
+
+              <p class="install-step-title">DLPulse Flet</p>
+              <ol class="install-list">
+                <li>
+                  Download
+                  <a
+                    href="https://github.com/calvarr/DLPulse/releases/tag/continuous"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><code>DLPulse.dmg</code></a
+                  >
+                  from GitHub Releases.
+                </li>
+                <li>Open the DMG and drag <strong>DLPulse.app</strong> to Applications.</li>
+                <li>
+                  Remove quarantine:
+                  <pre><code>sudo xattr -r -d com.apple.quarantine "/Applications/DLPulse.app" 2>/dev/null</code></pre>
+                </li>
+              </ol>
+
               <p class="install-lead">
-                Bundled: yt-dlp, ffmpeg, aria2c, WKWebView UI.
+                Bundled (Next): yt-dlp, ffmpeg, aria2c, WKWebView UI. Flet: yt-dlp, ffmpeg, Flet desktop UI.
               </p>
             </article>
           </div>
