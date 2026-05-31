@@ -463,7 +463,8 @@ dlpulse-next</code></pre>
         <h2>Install DLPulse Flet</h2>
         <p class="section-subtitle">
           Pre-built installers for <strong>Windows</strong>, <strong>macOS</strong>, and
-          <strong>Linux</strong> (AppImage).
+          <strong>Linux</strong> (AppImage). On Linux you can also run from
+          <strong>source</strong> with Python 3.11+ and your distro packages.
         </p>
 
         <div class="install-downloads">
@@ -506,7 +507,16 @@ dlpulse-next</code></pre>
             aria-selected="false"
             data-panel="flet-linux"
           >
-            Linux
+            Linux — AppImage
+          </button>
+          <button
+            type="button"
+            class="install-tab"
+            role="tab"
+            aria-selected="false"
+            data-panel="flet-linux-source"
+          >
+            Linux — from source
           </button>
         </div>
 
@@ -560,7 +570,11 @@ dlpulse-next</code></pre>
           </article>
 
           <article class="install-panel" id="flet-linux" role="tabpanel" hidden>
-            <h3>Linux — DLPulse Flet</h3>
+            <h3>Linux — AppImage (pre-built)</h3>
+            <p class="install-lead">
+              No install step — download, make executable, run. Alternative:
+              <a href="#" class="install-tab-link" data-panel="flet-linux-source">from source</a>.
+            </p>
             <ol class="install-list">
               <li>
                 Download
@@ -579,6 +593,35 @@ dlpulse-next</code></pre>
               </li>
             </ol>
             <p class="install-lead">Bundled: yt-dlp, ffmpeg, Flet desktop UI.</p>
+          </article>
+
+          <article class="install-panel" id="flet-linux-source" role="tabpanel" hidden>
+            <h3>Linux — from source</h3>
+            <p class="install-lead">
+              Requires Python <strong>3.11+</strong>, <code>mpv</code> (in-app video via libmpv),
+              and <code>ffmpeg</code> on PATH (yt-dlp merges). GTK3 is used by the Flet desktop shell.
+            </p>
+            <p class="install-step-title">1. System packages</p>
+            <p class="install-lead">Arch / Manjaro:</p>
+            <pre><code>sudo pacman -S --needed python python-pip gtk3 mpv ffmpeg</code></pre>
+            <p class="install-lead">Debian / Ubuntu:</p>
+            <pre><code>sudo apt update
+sudo apt install -y python3 python3-pip python3-venv libgtk-3-0 mpv ffmpeg</code></pre>
+            <p class="install-lead">Fedora:</p>
+            <pre><code>sudo dnf install -y python3 python3-pip gtk3 mpv ffmpeg</code></pre>
+            <p class="install-step-title">2. Clone and run</p>
+            <pre><code>git clone https://github.com/calvarr/DLPulse.git
+cd DLPulse
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip wheel
+pip install -e .
+./flet_app/run.sh</code></pre>
+            <p class="install-lead">
+              <code>pip install -e .</code> installs Flet, yt-dlp, Chromecast deps, and
+              <code>imageio-ffmpeg</code>. To build your own AppImage locally (on Linux):
+              <code>./build_linux.sh --appimage</code>.
+            </p>
           </article>
         </div>
 
