@@ -116,7 +116,7 @@
                 rel="noopener noreferrer"
                 >Releases</a
               >
-              <a class="repo-link" href="#install">Install guide</a>
+              <a class="repo-link" href="#install-flet">Install guide</a>
             </div>
           </article>
 
@@ -153,7 +153,7 @@
         </div>
       </section>
 
-      <section class="section section-alt" id="install">
+      <section class="section section-alt install-section" id="install">
         <div class="container">
           <h2>Install DLPulse Next</h2>
           <p class="section-subtitle">
@@ -407,13 +407,11 @@ dlpulse-next</code></pre>
             </article>
 
             <article class="install-panel" id="macos" role="tabpanel" hidden>
-              <h3>macOS</h3>
+              <h3>macOS — DLPulse Next</h3>
               <p class="install-lead">
-                Both desktop editions are ad-hoc signed (no Apple Developer ID). After copying to
-                Applications, remove quarantine if macOS blocks launch.
+                Ad-hoc signed (no Apple Developer ID). After copying to Applications, remove
+                quarantine if macOS blocks launch.
               </p>
-
-              <p class="install-step-title">DLPulse Next</p>
               <ol class="install-list">
                 <li>
                   Download
@@ -442,28 +440,8 @@ dlpulse-next</code></pre>
                   <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.
                 </li>
               </ol>
-
-              <p class="install-step-title">DLPulse Flet</p>
-              <ol class="install-list">
-                <li>
-                  Download
-                  <a
-                    href="https://github.com/calvarr/DLPulse/releases/tag/continuous"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><code>DLPulse.dmg</code></a
-                  >
-                  from GitHub Releases.
-                </li>
-                <li>Open the DMG and drag <strong>DLPulse.app</strong> to Applications.</li>
-                <li>
-                  Remove quarantine:
-                  <pre><code>sudo xattr -r -d com.apple.quarantine "/Applications/DLPulse.app" 2>/dev/null</code></pre>
-                </li>
-              </ol>
-
               <p class="install-lead">
-                Bundled (Next): yt-dlp, ffmpeg, aria2c, WKWebView UI. Flet: yt-dlp, ffmpeg, Flet desktop UI.
+                Bundled: yt-dlp, ffmpeg, aria2c, WKWebView UI.
               </p>
             </article>
           </div>
@@ -479,6 +457,140 @@ dlpulse-next</code></pre>
             (Flatpak + from source)
           </p>
         </div>
+      </section>
+
+      <section class="section container install-section" id="install-flet">
+        <h2>Install DLPulse Flet</h2>
+        <p class="section-subtitle">
+          Pre-built installers for <strong>Windows</strong>, <strong>macOS</strong>, and
+          <strong>Linux</strong> (AppImage).
+        </p>
+
+        <div class="install-downloads">
+          <a
+            class="button primary"
+            href="https://github.com/calvarr/DLPulse/releases/tag/continuous"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Download releases</a
+          >
+          <span class="install-note"
+            >Continuous build: <code>DLPulse-Setup.exe</code> (Windows),
+            <code>DLPulse.dmg</code> (macOS), <code>DLPulse-x86_64.AppImage</code> (Linux)</span
+          >
+        </div>
+
+        <div class="install-tabs" role="tablist" aria-label="Install DLPulse Flet">
+          <button
+            type="button"
+            class="install-tab active"
+            role="tab"
+            aria-selected="true"
+            data-panel="flet-windows"
+          >
+            Windows
+          </button>
+          <button
+            type="button"
+            class="install-tab"
+            role="tab"
+            aria-selected="false"
+            data-panel="flet-macos"
+          >
+            macOS
+          </button>
+          <button
+            type="button"
+            class="install-tab"
+            role="tab"
+            aria-selected="false"
+            data-panel="flet-linux"
+          >
+            Linux
+          </button>
+        </div>
+
+        <div class="install-panels">
+          <article class="install-panel active" id="flet-windows" role="tabpanel">
+            <h3>Windows — DLPulse Flet</h3>
+            <ol class="install-list">
+              <li>
+                Download
+                <a
+                  href="https://github.com/calvarr/DLPulse/releases/tag/continuous"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><code>DLPulse-Setup.exe</code></a
+                >
+                from GitHub Releases.
+              </li>
+              <li>Run the installer and launch <strong>DLPulse</strong> from the Start menu.</li>
+            </ol>
+            <p class="install-lead">Bundled: yt-dlp, ffmpeg, Flet desktop UI.</p>
+          </article>
+
+          <article class="install-panel" id="flet-macos" role="tabpanel" hidden>
+            <h3>macOS — DLPulse Flet</h3>
+            <p class="install-lead">
+              Ad-hoc signed (no Apple Developer ID). After copying to Applications, remove
+              quarantine if macOS blocks launch.
+            </p>
+            <ol class="install-list">
+              <li>
+                Download
+                <a
+                  href="https://github.com/calvarr/DLPulse/releases/tag/continuous"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><code>DLPulse.dmg</code></a
+                >
+                from GitHub Releases.
+              </li>
+              <li>Open the DMG and drag <strong>DLPulse.app</strong> to Applications.</li>
+              <li>
+                Remove quarantine (recommended if blocked or “damaged”):
+                <pre><code>sudo xattr -r -d com.apple.quarantine "/Applications/DLPulse.app" 2>/dev/null</code></pre>
+              </li>
+              <li>
+                Or: right‑click the app → <strong>Open</strong>, or
+                <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.
+              </li>
+            </ol>
+            <p class="install-lead">Bundled: yt-dlp, ffmpeg, Flet desktop UI.</p>
+          </article>
+
+          <article class="install-panel" id="flet-linux" role="tabpanel" hidden>
+            <h3>Linux — DLPulse Flet</h3>
+            <ol class="install-list">
+              <li>
+                Download
+                <a
+                  href="https://github.com/calvarr/DLPulse/releases/tag/continuous"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><code>DLPulse-x86_64.AppImage</code></a
+                >
+                from GitHub Releases.
+              </li>
+              <li>
+                Make executable and run:
+                <pre><code>chmod +x DLPulse-x86_64.AppImage
+./DLPulse-x86_64.AppImage</code></pre>
+              </li>
+            </ol>
+            <p class="install-lead">Bundled: yt-dlp, ffmpeg, Flet desktop UI.</p>
+          </article>
+        </div>
+
+        <p class="install-footer">
+          Full details:
+          <a
+            href="https://github.com/calvarr/DLPulse/blob/main/flet_app/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >README on GitHub</a
+          >
+        </p>
       </section>
 
       <section class="section container" id="gallery">

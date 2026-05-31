@@ -3,33 +3,36 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear().toString();
 }
 
-const tabs = document.querySelectorAll(".install-tab");
-const panels = document.querySelectorAll(".install-panel");
+document.querySelectorAll(".install-section").forEach((section) => {
+  const tabs = section.querySelectorAll(".install-tab");
+  const panels = section.querySelectorAll(".install-panel");
+  if (!tabs.length || !panels.length) return;
 
-function showInstallPanel(panelId) {
+  function showInstallPanel(panelId) {
+    tabs.forEach((tab) => {
+      const active = tab.dataset.panel === panelId;
+      tab.classList.toggle("active", active);
+      tab.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    panels.forEach((panel) => {
+      const active = panel.id === panelId;
+      panel.classList.toggle("active", active);
+      panel.hidden = !active;
+    });
+  }
+
   tabs.forEach((tab) => {
-    const active = tab.dataset.panel === panelId;
-    tab.classList.toggle("active", active);
-    tab.setAttribute("aria-selected", active ? "true" : "false");
+    tab.addEventListener("click", () => {
+      const id = tab.dataset.panel;
+      if (id) showInstallPanel(id);
+    });
   });
-  panels.forEach((panel) => {
-    const active = panel.id === panelId;
-    panel.classList.toggle("active", active);
-    panel.hidden = !active;
-  });
-}
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const id = tab.dataset.panel;
-    if (id) showInstallPanel(id);
-  });
-});
-
-document.querySelectorAll(".install-tab-link").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    const id = link.dataset.panel;
-    if (id) showInstallPanel(id);
+  section.querySelectorAll(".install-tab-link").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const id = link.dataset.panel;
+      if (id) showInstallPanel(id);
+    });
   });
 });
