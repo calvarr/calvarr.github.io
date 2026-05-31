@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="DLPulse — educational media-library tools built on yt-dlp and ffmpeg: desktop, TUI, CLI, and Android editions. Install guides for Linux, Windows, and macOS."
+      content="DLPulse — educational media-library tools built on yt-dlp and ffmpeg: desktop, TUI, CLI, and Android editions. Install guides for Linux (Flatpak or from source), Windows, and macOS."
     />
     <title>DLPulse — All Formats</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -148,8 +148,9 @@
           <h2>Install DLPulse Next</h2>
           <p class="section-subtitle">
             Pre-built installers for <strong>Windows</strong> and
-            <strong>macOS</strong>. On <strong>Linux</strong>, install from
-            source with your distro packages (GTK + WebKit + GStreamer).
+            <strong>macOS</strong>. On <strong>Linux</strong>, build a
+            <strong>Flatpak</strong> locally (recommended) or install from source
+            with your distro packages (GTK + WebKit + GStreamer).
           </p>
 
           <div class="install-downloads">
@@ -162,7 +163,7 @@
             >
             <span class="install-note"
               >Continuous build: <code>DLPulseNext-Setup.exe</code> (Windows),
-              <code>DLPulseNext.dmg</code> (macOS)</span
+              <code>DLPulseNext-x86_64.dmg</code> / <code>DLPulseNext-arm64.dmg</code> (macOS)</span
             >
           </div>
 
@@ -172,6 +173,15 @@
               class="install-tab active"
               role="tab"
               aria-selected="true"
+              data-panel="linux-flatpak"
+            >
+              Linux — Flatpak
+            </button>
+            <button
+              type="button"
+              class="install-tab"
+              role="tab"
+              aria-selected="false"
               data-panel="linux-arch"
             >
               Arch / Manjaro
@@ -226,13 +236,53 @@
           <div class="install-panels">
             <article
               class="install-panel active"
-              id="linux-arch"
+              id="linux-flatpak"
               role="tabpanel"
             >
-              <h3>Linux — Arch / Manjaro / EndeavourOS</h3>
+              <h3>Linux — Flatpak (recommended)</h3>
               <p class="install-lead">
-                Requires Python 3.11+. No Linux AppImage — use system WebKit for
-                a stable native window.
+                Sandboxed desktop bundle using the GNOME runtime (GTK3 + WebKit2GTK +
+                GStreamer). Build locally from a git clone — not on Flathub yet.
+                Bundled: yt-dlp, aria2c; ffmpeg via <code>imageio-ffmpeg</code> on first use.
+              </p>
+              <p class="install-step-title">1. Flatpak tools (one-time)</p>
+              <p class="install-lead">Arch / Manjaro:</p>
+              <pre><code>sudo pacman -S --needed flatpak flatpak-builder</code></pre>
+              <p class="install-lead">Debian / Ubuntu:</p>
+              <pre><code>sudo apt install -y flatpak flatpak-builder</code></pre>
+              <p class="install-lead">Fedora:</p>
+              <pre><code>sudo dnf install -y flatpak flatpak-builder</code></pre>
+              <p class="install-step-title">2. GNOME runtime (one-time)</p>
+              <pre><code>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.gnome.Platform//49 org.gnome.Sdk//49</code></pre>
+              <p class="install-step-title">3. Build and run</p>
+              <pre><code>git clone https://github.com/calvarr/DLPulse-next.git
+cd DLPulse-next
+bash packaging/flatpak/build.sh
+flatpak run com.github.calvarr.DLPulseNext</code></pre>
+              <p class="install-lead">
+                Config and library paths use <code>~/.config/dlpulse-next</code> (same as
+                from-source). Details:
+                <a
+                  href="https://github.com/calvarr/DLPulse-next/blob/main/packaging/flatpak/README.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >packaging/flatpak/README.md</a
+                >
+              </p>
+            </article>
+
+            <article
+              class="install-panel"
+              id="linux-arch"
+              role="tabpanel"
+              hidden
+            >
+              <h3>Linux — Arch / Manjaro / EndeavourOS (from source)</h3>
+              <p class="install-lead">
+                Requires Python 3.11+. Alternative to
+                <a href="#" class="install-tab-link" data-panel="linux-flatpak">Flatpak</a>
+                — uses system WebKit for a native window.
               </p>
               <p class="install-step-title">1. System packages</p>
               <pre><code>sudo pacman -S --needed \
@@ -251,8 +301,10 @@ dlpulse-next</code></pre>
             </article>
 
             <article class="install-panel" id="linux-debian" role="tabpanel" hidden>
-              <h3>Linux — Debian / Ubuntu</h3>
+              <h3>Linux — Debian / Ubuntu (from source)</h3>
               <p class="install-lead">
+                Alternative to
+                <a href="#" class="install-tab-link" data-panel="linux-flatpak">Flatpak</a>.
                 Ubuntu 22.04 / Debian 12 use WebKit <strong>4.0</strong>; Ubuntu
                 24.04+ use WebKit <strong>4.1</strong> (shown below).
               </p>
@@ -280,7 +332,11 @@ dlpulse-next</code></pre>
             </article>
 
             <article class="install-panel" id="linux-fedora" role="tabpanel" hidden>
-              <h3>Linux — Fedora</h3>
+              <h3>Linux — Fedora (from source)</h3>
+              <p class="install-lead">
+                Alternative to
+                <a href="#" class="install-tab-link" data-panel="linux-flatpak">Flatpak</a>.
+              </p>
               <p class="install-step-title">1. System packages</p>
               <pre><code>sudo dnf install -y \
   python3 python3-pip python3-gobject \
@@ -298,7 +354,11 @@ dlpulse-next</code></pre>
             </article>
 
             <article class="install-panel" id="linux-opensuse" role="tabpanel" hidden>
-              <h3>Linux — openSUSE</h3>
+              <h3>Linux — openSUSE (from source)</h3>
+              <p class="install-lead">
+                Alternative to
+                <a href="#" class="install-tab-link" data-panel="linux-flatpak">Flatpak</a>.
+              </p>
               <p class="install-step-title">1. System packages</p>
               <pre><code>sudo zypper install -y \
   python3 python3-pip python3-gobject \
@@ -345,9 +405,16 @@ dlpulse-next</code></pre>
                     href="https://github.com/calvarr/DLPulse-next/releases/tag/dlpulse-next-continuous"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><code>DLPulseNext.dmg</code></a
+                    ><code>DLPulseNext-x86_64.dmg</code></a
                   >
-                  from GitHub Releases.
+                  (Intel) or
+                  <a
+                    href="https://github.com/calvarr/DLPulse-next/releases/tag/dlpulse-next-continuous"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><code>DLPulseNext-arm64.dmg</code></a
+                  >
+                  (Apple Silicon) from GitHub Releases.
                 </li>
                 <li>Open the DMG and drag <strong>DLPulse Next</strong> to Applications.</li>
                 <li>
@@ -363,11 +430,12 @@ dlpulse-next</code></pre>
           <p class="install-footer">
             Full details:
             <a
-              href="https://github.com/calvarr/DLPulse-next#linux-install-from-source"
+              href="https://github.com/calvarr/DLPulse-next#linux"
               target="_blank"
               rel="noopener noreferrer"
               >README on GitHub</a
             >
+            (Flatpak + from source)
           </p>
         </div>
       </section>

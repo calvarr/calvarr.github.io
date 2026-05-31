@@ -25,3 +25,11 @@ tabs.forEach((tab) => {
     if (id) showInstallPanel(id);
   });
 });
+
+document.querySelectorAll(".install-tab-link").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const id = link.dataset.panel;
+    if (id) showInstallPanel(id);
+  });
+});

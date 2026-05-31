@@ -266,6 +266,16 @@ h3 {
   margin: 0 0 1rem;
 }
 
+.install-tab-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.install-tab-link:hover {
+  color: var(--accent-2);
+}
+
 .install-step-title {
   margin: 1rem 0 0.4rem;
   font-weight: 700;
