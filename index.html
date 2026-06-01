@@ -409,8 +409,8 @@ dlpulse-next</code></pre>
             <article class="install-panel" id="macos" role="tabpanel" hidden>
               <h3>macOS — DLPulse Next</h3>
               <p class="install-lead">
-                Ad-hoc signed (no Apple Developer ID). After copying to Applications, remove
-                quarantine if macOS blocks launch.
+                Ad-hoc signed (no Apple Developer ID). If macOS says the DMG or app is
+                <strong>corrupt</strong> or <strong>damaged</strong>, that is usually Gatekeeper — not a broken file.
               </p>
               <ol class="install-list">
                 <li>
@@ -428,11 +428,17 @@ dlpulse-next</code></pre>
                     rel="noopener noreferrer"
                     ><code>DLPulseNext-arm64.dmg</code></a
                   >
-                  (Apple Silicon).
+                  (Apple Silicon). Check architecture: <code>uname -m</code> → <code>x86_64</code> = Intel,
+                  <code>arm64</code> = Apple Silicon.
+                </li>
+                <li>
+                  If the DMG won’t mount (“corrupt” / “damaged”), clear quarantine on the downloaded file, then open it:
+                  <pre><code>xattr -cr ~/Downloads/DLPulseNext-x86_64.dmg</code></pre>
+                  (Adjust the path if you saved the DMG elsewhere.)
                 </li>
                 <li>Open the DMG and drag <strong>DLPulseNext.app</strong> to Applications.</li>
                 <li>
-                  Remove quarantine (recommended if blocked or “damaged”):
+                  After copying, remove quarantine on the app:
                   <pre><code>sudo xattr -r -d com.apple.quarantine "/Applications/DLPulseNext.app" 2>/dev/null</code></pre>
                 </li>
                 <li>
